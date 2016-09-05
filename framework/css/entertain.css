@@ -1,0 +1,125 @@
+*{margin: 0;padding: 0;}
+.block{
+    width: 100%;
+    height: 60px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+.block a{
+    float: left;
+    margin-left: 60px;
+}
+.block p{
+    text-align: center;
+    position: absolute;
+    font-size: 30px;
+    line-height: 60px;
+    color: #ffffff;
+    font-weight: bolder;
+    height: 60px;
+    width: 500px;
+    left:50%;
+    top: 0;
+    margin-left: -250px;
+    background: -webkit-linear-gradient(left,white,dodgerblue,white);
+    background: linear-gradient(to right,white,dodgerblue,white);
+}
+.divider{
+    width: 100%;
+    height: 5px;
+    background-color: #e9e9e9;
+}
+.sidebar-menu{
+    margin-top: 2px;
+    border-right: 2px solid black;
+    width: 180px;
+}
+.sidebar-menu a{
+    text-decoration: none;
+}
+/*һ���˵�*/
+.menu-first{
+    display: block;
+    height:45px;
+    width: 177px;
+    line-height:45px;
+    background-color: #e9e9e9;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+/*һ���˵���껮��״̬*/
+/*.menu-first:hover{*/
+/*text-decoration: none;*/
+/*background-color: #dddddd;*/
+/*border-top: 1px solid #b7b7b7;*/
+/*border-bottom: 1px solid #acacac;*/
+/*}*/
+/*.menu-first:active{*/
+/*background-color: darkorange;*/
+/*}*/
+.footer{
+    width: 100%;
+    height: 5px;
+    background-color: #e9e9e9;
+    margin-top: 750px;
+}
+
+.restaurant{
+    border: 1px solid #dddddd;
+    width: 283px;
+    height: 348px;
+    padding: 10px;
+    border-radius: 5px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+/*.restaurant:first-child{*/
+    /*margin-left: 0px;*/
+/*}*/
+.shopname{
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.shopintro{
+    font-size: 12px;
+}
+.price{
+    margin-top: 35px;
+    font-size: 20px;
+    color: hotpink;
+}
+.price span{
+    font-size: 12px;
+    color: #d5d5d5;
+    text-decoration: line-through;
+}
+
+.deep{
+    margin-top: 22px;
+    font-size: 14px;
+}
+.deep .sell{
+    margin-left: 188px;
+}
+.tags{
+    /*margin-left: -200px;*/
+    /*margin-top: -20px;*/
+    margin-bottom: 20px;
+}
+.tags .cat{
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+.tags a{margin-left: 20px;  border: 1px solid #eeeeee;}
+.changecolor{
+    background-color: dodgerblue;
+    color: #ffffff;
+}

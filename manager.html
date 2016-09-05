@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员</title>
+    <script src="framework/js/jquery-2.1.1.js"></script>
+    <script src="framework/js/jquery.validate.min.js"></script>
+    <script src="framework/js/messages_zh.min.js"></script>
+    <script src="framework/js/jquery.form.min.js"></script>
+    <script src="framework/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="framework/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="framework/css/manager.css">
+    <script src="framework/js/manager.js" charset="UTF-8"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="block">
+        <p>系统数据管理</p>
+    </div>
+    <hr/>
+    <div class="divider"></div>
+    <div class="sidebar-menu" style="float: left">
+        <a href="#pane0" class="nav-header menu-first collapsed selected changecolor" data-toggle="collapse">酒店信息管理</a>
+        <a href="#pane1" class="nav-header menu-first collapsed" data-toggle="collapse">娱乐信息管理</a>
+        <a href="#pane2" class="nav-header menu-first collapsed" data-toggle="collapse">餐饮信息管理</a>
+        <a href="#pane3" class="nav-header menu-first collapsed" data-toggle="collapse">应急信息管理</a>
+        <a href="#pane4" class="nav-header menu-first collapsed" data-toggle="collapse">投诉信息管理</a>
+    </div>
+    <div class="content" style="float: left;margin-left: 20px;margin-top: 20px;padding: 20px 20px;max-height: 700px;overflow: auto;width: 80%">
+        <div id="pane0" style="margin-left: 50px;height: 650px;display: none;" class="pane">
+            <div style="max-height: 400px;overflow: auto;">
+            <table class="table table-bordered">
+                <tr>
+                    <th>酒店名称</th>
+                    <th>酒店简介</th>
+                    <th>酒店地址</th>
+                    <th>酒店电话</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                </table>
+                </div>
+            <div style="margin-top: 20px" class="result">
+                <form id="hotel-result" action="" method="post">
+                    <div class="form-group-sm"> <label for="hotel-name">酒店名称：</label>
+                        <input id="hotel-name" type="text" name="hotel-name" class="form-control input0">
+                    </div>
+                   <div class="form-group-sm">
+                       <label for="hotel-intro">酒店简介：</label>
+                       <textarea id="hotel-intro" name="hotel-intro" class="form-control input1" cols="20" rows="3"></textarea>
+                   </div>
+                    <div class="form-group-sm">
+                        <label for="hotel-addr">酒店地址：</label>
+                        <input id="hotel-addr" type="text" name="hotel-addr" class="form-control input2">
+                    </div>
+                    <div class="form-group-sm">
+                        <label for="hotel-tel">酒店电话：</label>
+                        <input id="hotel-tel" type="text" name="hotel-tel" class="form-control input3">
+                    </div>
+            <div style="margin-left: 300px;width: 40%;height: 70px;float: left;margin-top: 20px">
+                <button type="submit" class="btn btn-success btn-sm add" style="margin-left: 30px">增加</button>
+                <button type="submit" class="btn btn-primary btn-sm change" style="margin-left: 30px">修改</button>
+                <button type="submit" class="btn btn-danger btn-sm delete" style="margin-left: 30px">删除</button>
+            </div>
+                </form>
+            </div>
+        </div>
+        <div id="pane1" style="margin-left: 50px;height: 650px" class="pane">
+            <div style="max-height: 400px;overflow: auto;">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>演出日期</th>
+                        <th>演出团体</th>
+                        <th>演出节目</th>
+                        <th>观赏价格</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin-top: 20px" class="result">
+                <form id="entertain-result" action="" method="post">
+                    <div class="form-group-sm"> <label for="show-date">演出日期：</label>
+                        <input id="show-date" type="text" name="show-date" class="form-control input0">
+                    </div>
+                    <div class="form-group-sm">
+                        <label for="show-acter">演出团体：</label>
+                        <input id="show-acter" type="text" name="show-acter" class="form-control input1">
+                    </div>
+                    <div class="form-group-sm">
+                        <label for="show-name">演出节目：</label>
+                        <input id="show-name" type="text" name="show-name" class="form-control input2">
+                    </div>
+                    <div class="form-group-sm">
+                        <label for="show-price">观赏价格：</label>
+                        <input id="show-price" type="text" name="show-price" class="form-control input3">
+                    </div>
+            <div style="margin-left: 300px;width: 40%;height: 70px;float: left;margin-top: 20px">
+                <button type="button" class="btn btn-success btn-sm add" style="margin-left: 30px">增加</button>
+                <button type="button" class="btn btn-primary btn-sm change" style="margin-left: 30px">修改</button>
+                <button type="button" class="btn btn-danger btn-sm delete" style="margin-left: 30px">删除</button>
+            </div>
+                </form>
+            </div>
+            </div>
+        <div id="pane2" style="margin-left: 50px;height: 650px " class="pane">
+            <div style="max-height: 400px;overflow: auto;">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>店铺名称</th>
+                        <th>店铺简介</th>
+                        <th>店铺分类</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin-top: 20px" class="result">
+                <form id="shop-result" action="" method="post">
+                    <div class="form-group-sm"> <label for="shop-name">店铺名称：</label>
+                        <input id="shop-name" type="text" name="shop-name" class="form-control input0">
+                    </div>
+                    <div class="form-group-sm">
+                        <label for="shop-intro">店铺简介：</label>
+                        <textarea id="shop-intro" name="shop-intro" class="form-control input1" cols="20" rows="3"></textarea>
+                    </div>
+                    <div class="form-group-sm">
+                        <label for="shop-cat">店铺分类：</label>
+                        <input id="shop-cat" type="text" name="shop-cat" class="form-control input2">
+                    </div>
+            <div style="margin-left: 300px;width: 40%;height: 70px;float: left;margin-top: 20px">
+                <button type="button" class="btn btn-success btn-sm add" style="margin-left: 30px">增加</button>
+                <button type="button" class="btn btn-primary btn-sm change" style="margin-left: 30px">修改</button>
+                <button type="button" class="btn btn-danger btn-sm delete" style="margin-left: 30px">删除</button>
+            </div>
+                </form>
+            </div>
+        </div>
+        <div id="pane3" style="margin-left: 50px;height: 500px " class="pane">
+            <div style="max-height: 400px;overflow: auto;">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>景区名称</th>
+                        <th>应急信息</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                </table>
+            </div>
+            <div style="margin-top: 20px" class="result">
+                <form id="urgent-result" action="" method="post">
+                    <div class="form-group-sm"> <label for="spot-name">景区名称：</label>
+                        <input id="spot-name" type="text" name="spot-name" class="form-control input0">
+                    </div>
+                    <div class="form-group-sm">
+                        <label for="urgent">应急信息：</label>
+                        <textarea id="urgent" name="urgent" class="form-control input1" cols="20" rows="3"></textarea>
+                    </div>
+            <div style="margin-left: 300px;width: 40%;height: 70px;float: left;margin-top: 20px">
+                <button type="button" class="btn btn-success btn-sm add" style="margin-left: 30px">增加</button>
+                <button type="button" class="btn btn-primary btn-sm change" style="margin-left: 30px">修改</button>
+                <button type="button" class="btn btn-danger btn-sm delete" style="margin-left: 30px">删除</button>
+            </div>
+                </form>
+            </div>
+        </div>
+        <div id="pane4" style="margin-left: 50px;height: 500px " class="pane">
+            <div style="max-height: 400px;overflow: auto;">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>用户ID</th>
+                        <th>投诉内容</th>
+                        <th>投诉状态</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>2</td>
+                </tr><tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>2</td>
+                </tr>
+                </table>
+            </div>
+            <div style="margin-top: 20px" class="result">
+                <form id="complain-result" action="" method="post">
+                    <div class="form-group-sm"> <label for="user-id">用户ID：</label>
+                        <input id="user-id" type="text" name="user-id" class="form-control input0">
+                    </div>
+                    <div class="form-group-sm">
+                        <label for="comp-content">投诉内容：</label>
+                        <textarea id="comp-content" name="comp-content" class="form-control input1" cols="20" rows="3"></textarea>
+                    </div>
+                    <div class="form-group-sm">
+                        <label for="comp-state">投诉状态：</label>
+                        <input id="comp-state" type="text" name="comp-state" class="form-control input2">
+                    </div>
+            <div style="margin-left: 300px;width: 40%;height: 70px;float: left;margin-top: 20px">
+                <button type="button" class="btn btn-success btn-sm recall" style="margin-left: 30px">回复</button>
+                <button type="button" class="btn btn-danger btn-sm delete" style="margin-left: 30px">删除</button>
+            </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <hr/>
+</div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户个人信息</title>
+    <script src="framework/js/jquery-2.1.1.js"></script>
+    <script src="framework/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="framework/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="framework/css/information.css">
+    <script src="framework/js/information.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="block">
+        <a href="index.html#page-two"><img src="framework/icons/图标(已去底).jpg"></a>
+        <p>用户信息管理</p>
+    </div>
+    <hr/>
+    <div class="divider"></div>
+    <div class="sidebar-menu" style="float: left">
+        <a href="#usermenu" class="nav-header menu-first collapsed" data-toggle="collapse">个人信息</a>
+        <ul id="usermenu" class="nav nav-list collapse menu-second">
+            <li><a href="#pane0" class='selected changecolor'>修改信息</a></li>
+			<li><a href="#pane4">修改密码</a></li>
+        </ul>
+        <a href="#complainmenu" class="nav-header menu-first collapsed" data-toggle="collapse">投诉管理</a>
+        <ul id="complainmenu" class="nav nav-list collapse menu-second">
+            <li><a href="#pane1">我的投诉<span class="badge">1</span></a></li>
+            <li><a href="#pane2">投诉回复<span class="badge">1</span></a></li>
+            <li><a href="#pane3">发起投诉<span class="badge"></span></a></li>
+        </ul>
+    </div>
+    <div class="content" style="float: left;margin-left: 20px;margin-top: 20px;padding: 20px 40px;min-height: 300px;max-height: 450px;overflow: auto;width: 1120px">
+        <div id="pane0" style="display: none;margin-left: 25%" >
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-2" for="old-username">原用户名:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="old-username" name="old-username">
+                    </div>
+                    <span></span>
+                </div>
+				<div class="form-group">
+                    <label class="control-label col-md-2" for="new-username">修改用户名:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="new-username" name="new-username">
+                    </div>
+                    <span></span>
+                </div>
+			
+                <div class="form-group">
+                    <label class="control-label col-md-2">性 &nbsp;   别:</label>
+                    <div class="col-md-3">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="sex"> 男 &nbsp;
+                        </label><label>
+                        <input type="radio" name="sex"> 女
+                    </label>
+                    </div>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2" for="phone">联系方式:</label>
+                    <div class="col-md-4">
+                        <input type="tel" class="form-control" id="phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-3">
+                        <button type="submit" class="btn btn-success">保存</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="pane1" style="display: none;">
+            <div class="message">
+                <p>adsjafja;jkl;afjoi;jofisjfjvfoijdiofhjkdhnjfvhfja;jkl;afjoi;jofisjfjvfoijdiofhjkdhnjfvhfja;jkl;afjoi;jofisjfjvfoijdiofhjkdhnjfvh
+                    fja;jkl;afjoi;jofisjfjvfoijdiofhjkdhnjfvhfja;jkl;afjoi;jofisjfjvfoijd
+                    fja;jkl;afjoi;jofisjfjvfoijdiofhjkdhnjfvhfja;jkl;afjoi;jofisjfjvfoijdiofhjkdhnjfvhfja;jkl;afjoi;jofisjfjvfoijdiofhjkdhnjfvh
+                    iofhjkdhnjfvhyuruwihvjknn mnuiwhjwerkjefh</p>
+                <span class="date">2016/8/20</span>
+            </div>
+            <div class="message">
+                <p >adsjafja;jkl;afjoi;jofisjfjvfoijdiofhjkdhnjfvhyuruwihvjknn mnuiwhjwerkjefh</p>
+                <span class="date">2016/8/20</span>
+            </div>
+            <div class="message">
+                <p >adsjafja;jkl;afjoi;jofisjfjvfoijdiofhjkdhnjfvhyuruwihvjknn mnuiwhjwerkjefh</p>
+                <span class="date">2016/8/20</span>
+            </div>
+            <div class="message">
+                <p >adsjafja;jkl;afjoi;jofisjfjvfoijdiofhjkdhnjfvhyuruwihvjknn mnuiwhjwerkjefh</p>
+                <span class="date">2016/8/20</span>
+            </div>
+            <div class="message">
+                <p >adsjafja;jkl;afjoi;jofisjfjvfoijdiofhjkdhnjfvhyuruwihvjknn mnuiwhjwerkjefh</p>
+                <span class="date">2016/8/20</span>
+            </div>
+        </div>
+        <div id="pane2" style="display: none">
+            <div class="message">
+                <span class="system">系统回复：</span><span class="sysmessage">&nbsp;谢谢您的建议，我们会改进的。</span>
+                <div class="title">
+                <p>adsjafja;jkl;afjoi;jofisjfjl;afjoi;jkfoijdiofhjkdhnjfvh
+                    fja;jkl;afjoi;jofisjfjvfjkl;afjoi;jofisjfjvfoijd
+                    fja;jkl;afjoi;jofisjfjvfjkl;afjoi;jofisjfjvfoijd
+                    fja;jkl;afjoi;jofisjfjvfjkl;afjoi;jofisjfjvfoijd
+                    fhjwerkjefh</p>
+                    </div>
+                <span class="evalute">评价</span><span class="date">2016/8/20</span>
+            </div>
+            <div class="message">
+                <span class="system">系统回复：</span><span class="sysmessage">&nbsp;谢谢您的建议，我们会改进的。</span>
+                <div class="title">
+                <p >系统回复系统回复系统回复回复系统回复统回复系统回复系统回复系统回复系统回复系统回复</p>
+                    </div>
+                <span class="evalute">评价</span><span class="date">2016/8/20</span>
+            </div>
+            <div class="message">
+                <span class="system">系统回复：</span><span class="sysmessage">&nbsp;谢谢您的建议，我们会改进的。</span>
+                <div class="title">
+                <p>adsjafja;jkl;afjoi;jofisjfjvfoijdiofhjkdhnjfvhyuruwihvjknn mnuiwhjwerkjefh</p>
+                </div>
+                <span class="evalute">评价</span><span class="date">2016/8/20</span>
+            </div>
+        </div>
+        <div id="pane3" style="display: none;margin-left:20%;width: 550px;">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-3" for="comp-title">投诉标题:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="comp-title" name="comp-title">
+                    </div>
+                    <span></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3" for="comp-qq">您的QQ号:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="comp-qq" name="comp-qq">
+                    </div>
+                    <span></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3" for="comp-cont">投诉内容:</label>
+                    <div class="col-md-4">
+                        <textarea id="comp-cont" name="comp-cont" cols="48" rows="5" style="resize: none"></textarea>
+                    </div>
+                    <span></span>
+                </div>
+                <div class="form-group" style="margin-left: 445px;margin-top: 20px;">
+                    <button type="submit" class="btn btn-primary">提交</button>
+                </div>
+                </form>
+        </div>
+		<div id="pane4" style="display: none;margin-left: 25%">
+			<form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-2" for="old-password">原密码:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="old-password" name="old-password">
+                    </div>
+                    <span></span>
+                </div>
+				<div class="form-group">
+                    <label class="control-label col-md-2" for="new-password">新密码:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="new-password" name="new-password">
+                    </div>
+                    <span></span>
+                </div>
+				<div class="form-group">
+                    <div class="col-md-offset-3">
+                        <button type="submit" class="btn btn-success">保存</button>
+                    </div>
+                </div>
+				</form>
+		</div>
+    </div>
+    <div class="footer"></div>
+    <hr/>
+</div>
+</body>
+</html>

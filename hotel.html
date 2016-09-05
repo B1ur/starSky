@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>酒店查询</title>
+    <script src="framework/js/jquery-2.1.1.js"></script>
+    <script src="framework/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="framework/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="framework/css/hotel.css">
+    <script src="framework/js/hotel.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="block">
+    <a href="index.html#page-two"><img src="framework/icons/图标(已去底).jpg"> </a>
+    <p>酒店查询系统</p>
+</div>
+    <hr/>
+    <div class="divider"></div>
+    <!--<div class="sidebar-menu" style="float: left">-->
+        <!--<a href="#pane0" class="nav-header menu-first collapsed selected changecolor" data-toggle="collapse">星级酒店查询</a>-->
+        <!--<a href="#pane1" class="nav-header menu-first collapsed" data-toggle="collapse">非星级酒店查询</a>-->
+    <!--</div>-->
+    <div class="content" style="float: left;margin-left: 20px;margin-top: 20px;padding: 20px 20px;min-height: 400px;max-height: 500px;overflow: auto;width: 50%">
+        <div id="pane0" style="margin-left: 10%;">
+            <form class="form-horizontal">
+                <div class="form-group" style="margin-top: 50px">
+                    <label class="control-label col-md-3" for="sceneryselect1">景区选择：</label>
+                    <div class="col-md-3">
+                        <select name="sceneryselect1" id="sceneryselect1" class="form-control">
+                            <option value="0">全部</option>
+                            <option value="1">峨眉山</option>
+                            <option value="2">都江堰</option>
+                            <option value="3">九寨沟</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 30px">
+                    <label class="control-label col-md-3" for="starhotelselect">酒店选择：</label>
+                    <div class="col-md-3">
+                        <select name="starhotelselect" id="starhotelselect" class="form-control">
+                            <option value="0">全部</option>
+                            <option value="1">BBB</option>
+                            <option value="2">CCC</option>
+                            <option value="3">DDD</option>
+                            <option value="4">EEE</option>
+                            <option value="5">EEE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 50px">
+                    <button class="btn btn-primary col-md-offset-3 col-md-2 search" type="submit">查询</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    <div id="result" style="float: right;width: 48%;margin-top: 50px;text-indent: 15px">
+        <p id="hotel-name"><b>酒店名称：</b><span></span></p>
+        <hr/>
+        <p id="hotel-intro"><b>酒店简介：</b><span></span></p>
+        <hr/>
+        <p id="hotel-address"><b>酒店地址：</b><span></span></p>
+        <hr/>
+        <p id="hotel-tel"><b>联系电话：</b><span></span></p>
+        <hr/>
+        <p id="hotel-rooms"><b>房间数量：</b><span></span></p>
+        <hr/>
+        <p id="hotel-rooms-left"><b>房间剩余：</b><span></span></p>
+    </div>
+    <div class="footer">
+    </div>
+    <hr/>
+</div>
+</body>
+</html>

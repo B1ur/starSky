@@ -1,0 +1,158 @@
+*{padding: 0;margin: 0;}
+
+body{background: url("../images/bg_meitu_1.jpg") no-repeat fixed;}
+
+#page-one,#page-two,#page-three{width: 100%;}
+
+#page-one{height: 700px;text-align: center;color: #ffffff;}
+
+#one-header{margin-top: 130px;font-weight: 800;font-size: larger;}
+
+#one-middle{width: 100%;margin-top: 70px;padding-left: 10%;}
+
+#one-middle div{width: 35%;border-top: 1px solid #ffffff;float: left;}
+
+#one-middle span{float: left;font-size: 14px;width: 10%;text-align: center;margin-top: -8px;}
+
+#one-footer{margin-top: 130px;width: 100%;font-size: 40px;line-height: 150%;}
+
+#one-footer a{display:block; margin-top: 70px;}
+
+#page-two{height: 80px;background-color: #ffffff;position: relative;z-index: 100;}
+
+#two-icon{margin-left: 8%;float: left;position: absolute;bottom: 3px;}
+
+#two-search{float: right;position: absolute;bottom: 24px;height: 30px;width: 30px;margin-left: 63%;border-radius: 5px;overflow: hidden;z-index: 100;background-color: #f7f7f7;}
+
+#two-search input{float: left;outline: none;height: 30px;width: 30px;border: 0;font-size: 12px;background-color: inherit;display: none;}
+
+#two-search img:first-child{float: left;margin-top: 5px;margin-left: 5px;cursor: pointer;}
+
+#two-search img:last-child{float:right;margin-right: 10px;margin-top: 5px;cursor: pointer;display: none;}
+
+
+#page-two .navbar{position: absolute;right: 15%;}
+
+#page-two .navbar li{clear: both; display: inline;height: 80px;line-height: 80px;width: 100px;margin-right: 20px;}
+
+#page-two a{text-decoration: none;color: black;}
+
+#two-border{width: 100%;height: 20px;z-index: 100;
+    background: skyblue url("../icons/pattern2.png") repeat-x scroll;
+}
+
+#menu-img{float: right;margin-right: 5%;width: 27px;height: 27px;margin-top: 28px;padding-left: 1px;padding-top: 1px;transition: 0.3s;-webkit-transition: 0.3s;}
+
+#menu-img:hover{transform: rotate(180deg);-webkit-transform: rotate(180deg);cursor: pointer;}
+
+#two-menu .menu-container{position: absolute;width: 200px;background-color: #fff;right: 10px;top: 50px;text-align: center;display: none;}
+
+#two-menu ul{width: 110px;overflow: visible;margin-left: 45px;margin-top: 40px;}
+
+#two-menu ul li{list-style: none;margin-top: 10px;margin-bottom: 20px;border-bottom: 1px solid #cccccc;height: 30px;line-height: 10px;cursor: pointer;}
+
+/*#two-menu ul li:not(:first-child){display: none;}*/
+
+#page-three{height: 580px;position: relative;}
+
+#page-three .three-img{position: absolute;}
+
+/*#img-one{background-color: yellow;right: 25%;top: 16%;}*/
+
+/*#img-two{background-color: blue;right: calc(25% + 100px);top: calc(16% + 100px);}*/
+
+/*#img-three{background-color: peru;right: calc(25% - 100px);top: calc(16% + 100px);}*/
+
+/*#img-four{background-color: forestgreen;right: calc(25% + 200px);top: calc(16% + 200px);}*/
+
+/*#img-five{background-color: blueviolet;right: calc(25% - 100px);top: calc(16% + 200px);}*/
+
+/*#img-six{background-color: chocolate;right: calc(25% + 300px);top: calc(16% + 300px);}*/
+
+/*#img-seven{background-color: darkslategray;right: calc(25% + 100px);top: calc(16% + 300px);}*/
+
+/*#img-eight{background-color: deeppink;right: calc(25% - 200px);top: calc(16% + 300px);}*/
+
+#dia-bot{width: 100%;height: 50%;margin-top: 140px;background-color: paleturquoise;overflow: visible;position: relative;}
+
+#dia-one{position: absolute;width: 40%;left: 10%;height: 130%;margin-top: -55px;border: 1px solid black;}
+
+#dia-two{position: absolute;right: 10%;width: 300px;height: 448px;top: 60px;}
+
+#img-one{float: left;}
+
+#img-two{margin-top: 112px;float: right;}
+
+#img-three{float: left;margin-top: 112px;}
+
+#img-four{float: right;margin-top: 112px;z-index: 11;width: 150px;height: 112px;background-color: #a6e1ec;}
+
+#dia-two img{z-index: 11;}
+
+#dia-two span{position: absolute;font-size: 22px;color: darkslateblue;font-weight: bold;}
+
+#img-one span{margin-top: 115px;margin-left: -126px;}
+#img-three span{margin-top: 115px;margin-left: -126px;}
+#img-two span{margin-top: -28px;margin-left: 43px}
+
+#page-four{width: 100%;height: 40px;background-color: black;margin-top: -10px;text-align: center;}
+
+#page-four a{text-decoration: none;color: #f5f5f5;line-height: 50px;font-size: 14px;}
+/*#dia-one img{display: none;}*/
+#dia-one span{position: absolute;}
+
+#dia-one .prev{top: 40%;left: 3px;}
+
+#dia-one .next{top: 40%;right: 3px;}
+
+#page-login,#page-register{display: none; position: fixed;width: 400px;height: 350px;left: 0;top: 0;right: 0;bottom: 0;margin: 120px auto;background-color: #ffffff;z-index: 1000;}
+
+/*#login{position: relative;}*/
+
+#login *{position: absolute;}
+
+#page-login span{float: right; margin-right: 8px;margin-top: 8px;cursor: pointer;}
+
+#login input{width: 300px;height: 40px;font-size: 16px;line-height: 40px;left: 50px;text-indent: 8px;}
+
+#login h3{font-size: 25px;left: 166px;top: 15px;color: green;}
+
+#username{top:100px;}
+#password{top: 180px;}
+
+#login p{font-size: 14px;line-height: 40px;width: 300px;}
+
+.error{color: red;font-size: 14px;
+    font-weight: normal;}
+
+#login .user-msg{left: 70px;top: 140px;}
+
+#login .pwd-msg{left: 70px;top: 220px;}
+
+#register *{position: absolute;}
+
+#page-register span{float: right; margin-right: 8px;margin-top: 8px;cursor: pointer;}
+
+#register input{width: 300px;height: 40px;font-size: 16px;line-height: 40px;left: 50px;text-indent: 8px;}
+
+#register h3{font-size: 25px;left: 166px;top: 15px;color: green;}
+
+#regname{top:100px;}
+#regpassword{top: 180px;}
+
+#register p{font-size: 14px;line-height: 40px;width: 300px;}
+
+#register .user-msg{left: 70px;top: 140px;}
+
+#register .pwd-msg{left: 70px;top: 220px;}
+
+#login button{left: 167px;bottom: 40px;background-color: lightgreen;width: 65px;height: 35px;outline: none;border: none;color: #FFFFFF;font-size: 14px;border-radius: 5px;}
+#register button{left: 167px;bottom: 40px;background-color: lightgreen;width: 65px;height: 35px;outline: none;border: none;color: #FFFFFF;font-size: 14px;border-radius: 5px;}
+
+#login button:hover{background-color: green;font-weight: bold;}
+#register button:hover{background-color: green;font-weight: bold;}
+
+#weather-btn:hover{font-weight: bold;}
+
+/*#weather-btn img:hover{transform: rotate(180deg);-webkit-transform: rotate(180deg);}*/
+

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>景区信息查询</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <script src="framework/js/jquery-2.1.1.js"></script>
+    <script src="framework/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="framework/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="framework/css/scenery.css">
+    <script src="framework/js/scenery.js"></script>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=d8e460287b5fa8e6041a12cd8ad4caad"></script>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/AMap.DrivingRender1120.css"/>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/AMap.TransferRender1120.css"/>
+    <style>
+        #mapPanel {
+            z-index: 999;
+            position: absolute;
+            background-color: white;
+            max-height: 500px;
+            overflow-y: auto;
+            right: 0;
+            width: 280px;
+            margin-top: -500px;
+        }
+    </style>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=d8e460287b5fa8e6041a12cd8ad4caad&plugin=AMap.Transfer"></script>
+    <!--<script type="text/javascript" id="driving" src="http://webapi.amap.com/maps?v=1.3&key=d8e460287b5fa8e6041a12cd8ad4caad&plugin=AMap.Driving"></script>-->
+    <script type="text/javascript" id="drivingRender" src="http://cache.amap.com/lbs/static/DrivingRender1230.js"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/TransferRender1230.js"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="block">
+        <a href="index.html#page-two"><img src="framework/icons/图标(已去底).jpg"> </a>
+        <p>景区信息查询</p>
+    </div>
+    <hr/>
+    <div class="divider"></div>
+    <div class="sidebar-menu" style="float: left">
+        <a href="#map" class="nav-header menu-first collapsed selected changecolor alink" data-toggle="collapse">路线查询</a>
+        <a href="#usermenu" class="nav-header menu-first collapsed" data-toggle="collapse">热门景点</a>
+        <ul id="usermenu" class="nav nav-list collapse menu-second">
+            <li><a href="#pane0" class="alink">峨眉山</a></li>
+            <li><a href="#pane1" class="alink">都江堰</a></li>
+            <li><a href="#pane2" class="alink">九寨沟</a></li>
+        </ul>
+    </div>
+    <div class="content" style="float: left;width: 82%;min-height: 700px;margin-left: 20px;">
+        <div id="map" style="display: none">
+            <form style="margin-left: 13%;margin-top: 10px">
+                <div class="form-group">
+                    <label class="sr-only" for="startspot">输入起点</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="startspot" placeholder="请输入起点">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="endspot">输入终点</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="endspot" placeholder="请输入终点">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <label class="sr-only" for="ways">出行方式</label>
+                        <select class="form-control" id="ways">
+                            <option value="0">驾车</option>
+                            <option value="1">公交</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary" id="searchWays">查询</button>
+                </div>
+            </form>
+            <div id='mapContainer' style="width: calc(80% - 60px);height: 500px;border: 1px solid #9d9d9d;margin-left: 80px"></div>
+            <div class="button-group" style="position: absolute;top: 600px;right: 300px">
+                <input type="button" class="button" id="control" value="显示/隐藏实时路况"/>
+            </div>
+            <div id="mapTip"></div>
+            <div id="mapPanel"></div>
+            <!--<script type="text/javascript">-->
+                <!--var map, geolocation;-->
+                <!--//加载地图，调用浏览器定位服务-->
+                <!--map = new AMap.Map('mapContainer', {-->
+                    <!--resizeEnable: true,-->
+                    <!--center: [104.066541, 30.572269],-->
+                    <!--zoom: 13-->
+                <!--});-->
+                <!--map.plugin('AMap.Geolocation', function() {-->
+                    <!--geolocation = new AMap.Geolocation({-->
+                        <!--enableHighAccuracy: true,//是否使用高精度定位，默认:true-->
+                        <!--timeout: 10000,          //超过10秒后停止定位，默认：无穷大-->
+                        <!--buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)-->
+                        <!--zoomToAccuracy: true,      //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false-->
+                        <!--buttonPosition:'RB',-->
+                        <!--showCircle: false-->
+                    <!--});-->
+                    <!--map.addControl(geolocation);-->
+                    <!--geolocation.getCurrentPosition();-->
+                    <!--AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息-->
+                    <!--AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息-->
+                <!--});-->
+                <!--//解析定位结果-->
+<!--//                function onComplete(data) {-->
+<!--//                    var str=['定位成功'];-->
+<!--//                    str.push('经度：' + data.position.getLng());-->
+<!--//                    str.push('纬度：' + data.position.getLat());-->
+<!--//                    str.push('精度：' + data.accuracy + ' 米');-->
+<!--//                    str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));-->
+<!--//                    document.getElementById('mapTip').innerHTML = str.join('<br>');-->
+<!--//                }-->
+                <!--//    解析定位错误信息-->
+                <!--function onError(data) {-->
+                    <!--document.getElementById('mapTip').innerHTML = '定位失败';-->
+                <!--}-->
+            <!--</script>-->
+            <script type="text/javascript">
+//                var select = $('#ways').find('option:selected').val();
+                $(function() {
+//                    var start = '西安钟楼';
+//                    var end = '西安小寨';
+//                    start = $('#startspot').text();
+//                    end = $('#endspot').text();
+                    var map = new AMap.Map('mapContainer', {
+                        resizeEnable: true,
+                        center: [104.066541, 30.572269],
+                        zoom: 13
+                    });
+                    //路况图层
+                    var trafficLayer = new AMap.TileLayer.Traffic({
+                        zIndex: 10
+                    });
+                    trafficLayer.setMap(map);
+
+                    var isVisible = true;
+                    AMap.event.addDomListener(document.getElementById('control'), 'click', function() {
+                        if (isVisible) {
+                            trafficLayer.hide();
+                            isVisible = false;
+                        } else {
+                            trafficLayer.show();
+                            isVisible = true;
+                        }
+                    }, false);
+                    //
+                    $('#searchWays').click(function () {
+                        var start = $('#startspot').val();
+                        var end = $('#endspot').val();
+                        var selected = $('#ways').val();
+//                        alert(selected);
+//                        if (selected == 0) {
+//                            $('#driving').src = 'http://webapi.amap.com/maps?v=1.3&key=d8e460287b5fa8e6041a12cd8ad4caad&plugin=AMap.Driving';
+//                            $('#drivingRender').src = 'http://cache.amap.com/lbs/static/DrivingRender1230.js';
+//                            var drivingOption = {
+//                                policy: AMap.DrivingPolicy.LEAST_TIME
+//                            };
+//                            var driving = new AMap.Driving(drivingOption);
+////                            var start = $('#startspot').val();
+////                            var end = $('#endspot').val();
+//                            driving.search([{keyword: start}, {keyword: end}],function (status, result) {
+//                                        if (status === 'complete' && result.info === 'OK') {
+//                                            (new Lib.AMap.DrivingRender()).autoRender({
+//                                                data: result,
+//                                                map: map,
+//                                                panel: 'mapPanel'
+//                                            });
+//                                        } else {
+//                                            alert(result);
+//                                        }
+//                                    });
+//                        } else if (selected == 1) {
+////                            $('#driving').src = 'http://webapi.amap.com/maps?v=1.3&key=d8e460287b5fa8e6041a12cd8ad4caad&plugin=AMap.Transfer';
+////                            $('#drivingRender').src = 'http://cache.amap.com/lbs/static/TransferRender1230.js';
+                                var transferOptions = {
+                                    city: '成都市',
+                                    policy: AMap.TransferPolicy.LEAST_TIME
+                                };
+                                var transfer = new AMap.Transfer(transferOptions);
+//                                var start = $('#startspot').val();
+//                                var end = $('#endspot').val();
+                                transfer.search([{keyword: start}, {keyword: end}], function (status, result) {
+                                    if (status == 'complete') {
+                                        (new Lib.AMap.TransferRender()).autoRender({
+                                            data: result,
+                                            map: map,
+                                            panel: 'mapPanel'
+                                        });
+                                    } else {
+                                        alert(result);
+                                    }
+                                });
+//                            }
+                    });
+                });
+
+            </script>
+        </div>
+        <div id="pane0" class="panelstyle" style="display: none">
+                <h3>景区简介：</h3>
+                <img src="framework/images/emei2.jpg" class="spot-img">
+                <p>峨眉山（Mount Emei）位于中国四川省乐山市峨眉山市境内，是中国“四大佛教名山”之一，地势陡峭，风景秀丽，
+                    素有“峨眉天下秀”之称，山上的万佛顶最高，海拔3099米，高出峨眉平原2700多米。</p>
+                <p>峨眉山宗教文化特别是佛教文化构成了峨眉山历史文化的主体，所有的建筑、造像、法器以及礼仪、音乐、绘画
+                    等都展示出宗教文化的浓郁气息。山上多古迹、寺庙，有报国寺、伏虎寺、洗象池、龙门洞、舍身崖、峨眉佛光
+                    等胜迹，是中国著名的旅游、休养、避暑目的地之一。</p>
+                <img src="framework/images/emei3.jpg" class="spot-img">
+                <p>峨眉山为蚀余山，介于北纬29°16′-29°43′，东经103°10′-103°37′之间，为邛崃山南段余脉，自峨眉平原拔地而起，
+                    山体南北延伸，绵延23公里，面积约154平方公里，主要由大峨山、二峨山、三峨山、四峨山4座山峰组成。
+                    山的中、下部分布着花岗岩、变质岩及石灰岩，山顶部盖有玄武岩。</p>
+                <p>峨眉山是世界文化与自然双重遗产，山上的古建筑群为全国重点文物保护单位，以峨眉山为主体的峨眉山景区
+                    为国家重点风景名胜区、国家AAAAA级旅游景区。</p>
+                <h3>景区路线：</h3>
+                <img src="framework/images/emei.jpg" class="spot-img">
+        </div>
+        <div id="pane1" class="panelstyle" style="display: none">
+            <h3>景区简介：</h3>
+            <img src="framework/images/dujiangyan2.jpg" class="spot-img">
+            <p>都江堰是世界文化遗产（2000年被联合国教科文组织列入“世界文化遗产”名录）、世界自然遗产（四川大熊猫栖息地）、
+                全国重点文物保护单位、国家级风景名胜区、国家AAAAA级旅游景区。</p>
+            <p>都江堰位于四川省成都市都江堰市城西，坐落在成都平原西部的岷江上，始建于秦昭王末年(约公元前256～前251)，是蜀郡太守李冰父子在前人鳖灵开凿的基础上组织修建的大型水利工程，由分水鱼嘴、飞沙堰、宝瓶口等部分组成，两千多年来一直发挥着防洪灌溉的作用，使成都平原成为水旱从人、沃野千里的"天府之国"，至今灌区已达30余县市、面积近千万亩，是全世界迄今为止，年代最久、
+                唯一留存、仍在一直使用、以无坝引水为特征的宏大水利工程，凝聚着中国古代汉族劳动人民勤劳、勇敢、智慧的结晶。</p>
+            <img src="framework/images/dujiangyan3.jpg" class="spot-img">
+            <p>都江堰风景区主要有伏龙观、二王庙、安澜索桥、玉垒关、离堆公园、玉垒山公园、玉女峰、灵岩寺、普照寺、翠月湖、都江堰水利工程等。</p>
+            <h3>景区路线：</h3>
+            <img src="framework/images/dujiangyan.jpg" class="spot-img">
+        </div>
+        <div id="pane2" class="panelstyle" style="display: none">
+            <h3>景区简介：</h3>
+            <img src="framework/images/jiuzhaigou2.jpg" class="spot-img">
+            <p>九寨沟，世界自然遗产，国家重点风景名胜区，国家AAAAA级旅游景区，国家级自然保护区。</p>
+            <p>九寨沟位于四川省阿坝藏族羌族自治州九寨沟县境内，是中国第一个以保护自然风景为主要目的的自然保护区。地处青藏高原向四川盆地过渡地带，距离成都市400多千米，是一条纵深50余千米的山沟谷地，总面积64297公顷，
+                森林覆盖率超过80%。因沟内有树正寨、荷叶寨、则查洼寨等九个藏族村寨坐落在这片高山湖泊群中而得名。</p>
+            <img src="framework/images/jiuzhaigou3.jpg" class="spot-img">
+            <p>九寨沟国家级自然保护区主要保护对象是以大熊猫、金丝猴等珍稀动物及其自然生态环境。有74种国家保护珍稀植物，有18种国家保护动物，还有丰富的古生物化石、古冰川地貌。</p>
+            <p>“九寨归来不看水”，是对九寨沟景色真实的诠释。泉、瀑、河、滩108个海子，构成一个个五彩斑斓的瑶池玉盆。长海、剑岩、诺日朗、树正、扎如、黑海六大景观，呈“Y”字形分布。翠海、叠瀑、彩林、雪峰、藏情、蓝冰，被称为“六绝”。神奇的九寨，被世人誉为“童话世界”，号称“水景之王”。</p>
+            <h3>景区路线：</h3>
+            <img src="framework/images/jiuzhaigou.jpg" class="spot-img">
+        </div>
+        </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+*{margin: 0;padding: 0;}
+.block{
+    width: 100%;
+    height: 60px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+.block a{
+    float: left;
+    margin-left: 60px;
+}
+.block p{
+    text-align: center;
+    position: absolute;
+    font-size: 30px;
+    line-height: 60px;
+    color: #ffffff;
+    font-weight: bolder;
+    height: 60px;
+    width: 500px;
+    left:50%;
+    top: 0;
+    margin-left: -250px;
+    background: -webkit-linear-gradient(left,white,dodgerblue,white);
+    background: linear-gradient(to right,white,dodgerblue,white);
+}
+.divider{
+    width: 100%;
+    height: 5px;
+    background-color: #e9e9e9;
+}
+.sidebar-menu{
+    margin-top: 2px;
+    border-right: 2px solid black;
+    width: 180px;
+}
+.sidebar-menu a{
+    text-decoration: none;
+}
+/*һ���˵�*/
+.menu-first{
+    display: block;
+    height:45px;
+    width: 177px;
+    line-height:45px;
+    background-color: #e9e9e9;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+/*һ���˵���껮��״̬*/
+.menu-first:hover{
+    text-decoration: none;
+    background-color: #dddddd;
+    border-top: 1px solid #b7b7b7;
+    border-bottom: 1px solid #acacac;
+}
+/*�����˵�*/
+.menu-second li a{
+    background-color: #f6f6f6;
+    height:35px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    font-size: 12px;
+    text-align:center;
+}
+/*�����˵���껮����ʽ*/
+.menu-second li a:hover {
+    text-decoration: none;
+    background-color: #66c3ec;
+    border-top: 1px solid #83ceed;
+    border-bottom: 1px solid #83ceed;
+    border-right: 3px solid #f8881c;
+    border-left: 3px solid #66c3ec;
+}
+/*�����˵�ѡ��״̬*/
+.menu-second-selected {
+    background-color: #66c3ec;
+    height:31px;
+    line-height:31px;
+    border-top: 1px solid #83ceed;
+    border-bottom: 1px solid #83ceed;
+    border-right: 3px solid #f8881c;
+    border-left: 3px solid #66c3ec;
+    text-align:center;
+}
+.content div{
+    /*position: absolute;*/
+}
+.message{
+    position: relative;
+    font-size: 16px;
+    line-height: 30px;
+    width: 100%;min-height: 90px;border: 1px solid #ddd;
+    padding: 15px 30px;
+}
+.message:not(:first-child){
+    margin-top: 20px;
+}
+.message p{
+    background-color: #eeeeee;
+}
+.message .date{
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    color: #b7b7b7;
+    font-size: 14px;
+}
+.title{
+    margin-left: 36px;
+    background-color: #eeeeee;
+    font-size: 14px;
+    height: 20px;
+    width: 44em;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+.system{
+    color: dodgerblue;
+    font-weight: bold;
+}
+.sysmessage{
+    font-size: 14px;
+}
+#unfinished .message:first-child{
+    margin-top: 15px;
+}
+#unfinished .message{
+    line-height: 40px;
+}
+#unfinished button{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+#unfinished .message{
+    padding-top: 10px;
+}
+.footer{
+    width: 100%;
+    height: 5px;
+    background-color: #e9e9e9;
+    margin-top: 500px;
+}
+.message .evalute{
+    position: absolute;
+    right: 100px;
+    bottom: 0px;
+    color: #b7b7b7;
+    font-size: 13px;
+    cursor: pointer;
+}
+.message .evalute:hover{text-decoration: underline;color: black;}
+

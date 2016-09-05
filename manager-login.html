@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员登录</title>
+    <script src="framework/js/jquery-2.1.1.js"></script>
+    <script src="framework/js/jquery.validate.min.js"></script>
+    <script src="framework/js/messages_zh.min.js"></script>
+    <script src="framework/js/jquery.form.min.js"></script>
+    <script src="framework/js/manager_login.js"></script>
+    <style>
+        *{margin: 0;padding: 0;}
+        #manager-login{position: fixed;width: 400px;height: 350px;left: 0;top: 0;right: 0;bottom: 0;margin: 100px auto;background-color: #eeeeee;z-index: 1000;}
+
+        /*#manager-login .close{margin-top: 8px;margin-right: 8px;}*/
+
+        #select-btn{font-size: 20px;color: black;width: 120px;height: 35px;line-height:35px;border: 1px solid #ddd;margin: -10px auto;padding: 0;}
+        #select-btn span{display:inline-block;cursor: pointer;width: 60px;text-indent: 10px;}
+        .select-bg{background-color: lightgreen;color: white;}
+        #login *{position: absolute;}
+        #login input{width: 300px;height: 40px;font-size: 16px;line-height: 40px;left: 50px;text-indent: 8px;}
+        #managername{top:100px;}
+        #password{top: 180px;}
+        #login button{bottom: 40px;left: 44%;}
+        #login p{font-size: 14px;line-height: 40px;width: 300px;}
+        #login .manager-msg{left: 70px;top: 140px;}
+        #login .pwd-msg{left: 70px;top: 220px;}
+        #login button{left: 167px;bottom: 40px;background-color: lightgreen;width: 65px;height: 35px;outline: none;border: none;color: #FFFFFF;font-size: 14px;border-radius: 5px;}
+        #login button:hover{background-color: green;font-weight: bold;}
+
+        #register *{position: absolute;}
+        #register input{width: 300px;height: 40px;font-size: 16px;line-height: 40px;left: 50px;text-indent: 8px;}
+        #regname{top:100px;}
+        #regpassword{top: 180px;}
+        #keyword{top:260px;}
+        #register button{bottom: 40px;left: 44%;}
+        #register p{font-size: 14px;line-height: 40px;width: 300px;}
+        #register .manager-msg{left: 70px;top: 140px;}
+        #register .pwd-msg{left: 70px;top: 220px;}
+        #register .key-msg{left:70px;top: 300px;}
+        #register button{left: 167px;bottom: 40px;background-color: lightgreen;width: 65px;height: 35px;outline: none;border: none;color: #FFFFFF;font-size: 14px;border-radius: 5px;}
+        #register button:hover{background-color: green;font-weight: bold;}
+
+        .error{color: red;font-size: 14px;
+            font-weight: normal;}
+    </style>
+</head>
+<body>
+<div id="manager-login">
+    <span class="close" style="margin-left: 373px;line-height: 37px;cursor: pointer;"><img src="framework/icons/删除.png"> </span>
+    <div id="select-btn"><span class="login-btn select-bg">登录</span><span class="register-btn">注册</span></div>
+    <form role="form" action="" method="post" id="login" >
+        <input id="managername" name="managername" type="text" placeholder="管理员名">
+        <p class="warnMsg manager-msg"></p>
+        <input id="password" name="password" type="password" placeholder="密 码">
+        <p class="warnMsg pwd-msg"></p>
+        <button type="submit">登录</button>
+    </form>
+    <form role="form" action="" method="post" id="register" style="display: none">
+        <input id="regname" name="regname" type="text" placeholder="管理员名">
+        <p class="warnMsg manager-msg"></p>
+        <input id="regpassword" name="regpassword" type="password" placeholder="密 码">
+        <p class="warnMsg pwd-msg"></p>
+        <input id="keyword" name="keyword" type="text" placeholder="验证码">
+        <p class="warnMsg key-msg"></p>
+        <button type="submit">注册</button>
+    </form>
+    <!--<form action="" id="register" method="post">-->
+        <!---->
+    <!--</form>-->
+</div>
+</body>
+</html>
