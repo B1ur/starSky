@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="framework/js/jquery-2.1.1.js"></script>
+    <script src="framework/js/jquery.validate.min.js"></script>
+    <script src="framework/js/messages_zh.min.js"></script>
+    <script src="framework/js/jquery.form.min.js"></script>
+    <script src="framework/js/home.js"></script>
+    <link rel="stylesheet" type="text/css" href="framework/css/normalize.css" />
+    <link rel='stylesheet prefetch' href='framework/css/slick.min.css'>
+    <link rel="stylesheet" type="text/css" href="framework/css/style.css">
+    <link rel="stylesheet" type="text/css" href="framework/css/home.css">
+</head>
+<body>
+    <div id="page-one">
+        <div id="one-header">
+            <h1>游客服务系统</h1>
+        </div>
+        <div id="one-middle">
+            <div></div>
+            <span>你好，世界！</span>
+            <div></div>
+        </div>
+        <div id="one-footer">
+            <p>欢迎您</p>
+            <p>我们致力于打造一款全方位的</p>
+            <p>旅游服务平台</p>
+            <a href="#page-two"><img src="framework/icons/下一篇.png"></a>
+        </div>
+            </div>
+    <div id="page-two">
+            <a href="#"><img id="two-icon" src="framework/icons/图标(已去底).jpg"></a>
+        <div id="two-search">
+            <img src="framework/icons/搜索.png" id="search-btn">
+        <input type="search" placeholder="搜索">
+            <img class="close" src="framework/icons/删除.png">
+        </div>
+        <ul class="navbar">
+            <li><a href="#">首    页</a></li>
+            <li><a href="">最新资讯</a></li>
+            <li><a href="">关于我们</a></li>
+        </ul>
+        <div id="two-menu">
+            <a id="menu-img"><img src="framework/icons/菜单.png"> </a>
+            <div class="menu-container">
+            <ul>
+                <li><a id="login-btn">登录</a><span> | </span><a id="register-btn">注册</a></li>
+                <li><a href="information.html">个人信息</a></li>
+                <li><a href="">退出</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div id="page-login">
+        <span><img src="framework/icons/删除.png"></span>
+        <form id="login" action="" method="post">
+            <h3>登   录</h3>
+            <input id="username" name="username" type="text" placeholder="用户名">
+            <p class="warnMsg user-msg"></p>
+            <input id="password" name="password" type="password" placeholder="密码">
+            <p class="warnMsg pwd-msg"></p>
+            <button type="submit">登 录</button>
+        </form>
+    </div>
+    <div id="page-register">
+        <span><img src="framework/icons/删除.png"></span>
+        <form id="register" action="" method="post">
+            <h3>注  册</h3>
+            <input id="regname" name="regname" type="text" placeholder="用户名">
+            <p class="warnMsg user-msg"></p>
+            <input id="regpassword" name="regpassword" type="password" placeholder="密码">
+            <p class="warnMsg pwd-msg"></p>
+            <button type="submit">注 册</button>
+        </form>
+    </div>
+    <div id="two-border">
+    </div>
+    <div id="page-three" class="section-project">
+        <div id="page-weather" style="width: 370px;height: 360px;position: absolute;z-index: 1000;top: 84px;overflow: hidden;left: -290px;">
+        <div id="weather" style="width: 290px;height: 360px;background-color: deepskyblue;">
+        <iframe src="http://www.thinkpage.cn/weather/weather.aspx?uid=U6F781026C&cid=CHBJ000000&l=zh-CHS&p=SMART&a=1&u=C&s=12&m=2&x=1&d=3&fc=FFFFFF&bgc=00BFFF&bc=&ti=0&in=0&li=" frameborder="0" scrolling="no" width="250" height="300" allowTransparency="true" style="margin-top: 50px;margin-left: 10px"></iframe>
+        <div id="weather-btn" style="position: absolute;width: 80px;height: 39px;background-color: deepskyblue;right: 0;top: 0;color: white;font-size: 14px;cursor: pointer;">
+            <span style="line-height: 39px;margin-left: 15px;">天  气<img src="framework/icons/向右.png" style="margin-bottom: -8px"></span>
+        </div>
+            </div>
+        </div>
+            <div  class="project-carousel">
+            <div  class="project-strip">
+                <div class="project"><img src="framework/images/1.jpg" alt=""/></div>
+                <div class="project"><img src="framework/images/2.jpg" alt=""/></div>
+                <div class="project"><img src="framework/images/3.jpg" alt=""/></div>
+                <div class="project"><img src="framework/images/4.jpg" alt=""/></div>
+                <div class="project"><img src="framework/images/5.jpg" alt=""/></div>
+                <div class="project"><img src="framework/images/6.jpg" alt=""/></div>
+                <div class="project"><img src="framework/images/7.jpg" alt=""/></div>
+                <div class="project"><img src="framework/images/8.jpg" alt=""/></div>
+                <div class="project"><img src="framework/images/9.jpg" alt=""/></div>
+            </div>
+            <div class="project-screen">
+                <div class="project-detail">
+                    <div class="project"><img src="framework/images/1.jpg" alt=""/></div>
+                    <div class="project"><img src="framework/images/2.jpg" alt=""/></div>
+                    <div class="project"><img src="framework/images/3.jpg" alt=""/></div>
+                    <div class="project"><img src="framework/images/4.jpg" alt=""/></div>
+                    <div class="project"><img src="framework/images/5.jpg" alt=""/></div>
+                    <div class="project"><img src="framework/images/6.jpg" alt=""/></div>
+                    <div class="project"><img src="framework/images/7.jpg" alt=""/></div>
+                    <div class="project"><img src="framework/images/8.jpg" alt=""/></div>
+                    <div class="project"><img src="framework/images/9.jpg" alt=""/></div>
+                </div>
+                <div class="screen-frame"></div>
+            </div>
+            <div id="dia-two">
+                <div id="img-one">
+                    <a href="hotel.html"><img src="framework/images/spot.jpg"></a><span>酒店查询</span>
+                </div>
+                <div id="img-two">
+                    <span>景区查询</span><a href="scenery.html"><img src="framework/images/hotel.jpg"></a>
+                </div>
+                <div id="img-three">
+                    <a href="entertain.html"><img src="framework/images/entertain.jpg"></a><span>娱乐查询</span>
+                </div>
+                <div id="img-four">
+                    <a href=""><span></span></a>
+                </div>
+            </div>
+        </div>
+        <!--<div id="img-three" class="three-img"></div>-->
+        <!--<div id="img-four" class="three-img"></div>-->
+        <!--<div id="img-five" class="three-img"></div>-->
+        <!--<div id="img-six" class="three-img"></div>-->
+        <!--<div id="img-seven" class="three-img"></div>-->
+        <!--<div id="img-eight" class="three-img"></div>-->
+    </div>
+    <script src='framework/js/slick.min.js'></script>
+    <script type="text/javascript">
+        $(".project-detail").slick({
+            slidesToShow: 1,
+            arrows: false,
+            asNavFor: '.project-strip',
+            autoplay: true,
+            autoplaySpeed: 2000
+        });
+
+        $(".project-strip").slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: false,
+            asNavFor: '.project-detail',
+            dots: false,
+            infinite: true,
+            centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
+<div id="page-four">
+    <a href="">联系我们</a>
+    <a href="">官方微信</a>
+    <a href="">官方微博</a>
+</div>
+</body>
+</html>
